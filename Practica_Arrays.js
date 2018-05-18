@@ -30,5 +30,37 @@ return  arreglos.reduce(function(numero, acumulador)
   }
   return numeros;
 }*/
+/*
+const dobles =(...arreglos) => arreglos.map(numeros =>  numeros*2);*/
 
-const dobles =(...arreglos) => arreglos.map(numeros =>  numeros*2);
+function pares(...arreglos)
+{
+  let length = arreglos.length;
+  let resultado = [];
+  for (var i = 0; i < length; i++) {
+    let numero = arreglos[i];
+    if (numero % 2 == 0) {
+      resultado.push(numero)
+    }
+  }
+  return resultado;
+}
+
+
+function HoSanta(numeroHo )
+{
+  var Text = "Ho";
+  var arreglo = [];
+  for (var i = 1; i <= numeroHo ; i++) {
+    if (numeroHo == i) {
+      arreglo.push(Text + "!");
+    }else {
+      arreglo.push(Text);
+    }
+
+
+  }
+  var resultado = arreglo.join(" ");
+
+  return resultado.toString();
+}
